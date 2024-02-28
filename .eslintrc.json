@@ -1,18 +1,18 @@
 {
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es2021": true
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json", // Path to your tsconfig file
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
   },
+  "plugins": ["@typescript-eslint", "unicorn"],
   "extends": [
-    "airbnb-base",
-    "plugin:sonarjs/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:unicorn/recommended"
   ],
-  "parserOptions": {
-    "ecmaVersion": "latest"
-  },
-  "plugin": ["unicorn", "sonarjs"],
   "rules": {
     "linebreak-style": "off",
     "no-console": "off",
